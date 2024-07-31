@@ -1,18 +1,38 @@
-// import { LuHeart } from "react-icons/lu";
-import { GiHearts } from "react-icons/gi";
+import { LuHeart } from "react-icons/lu";
+// import { GiHearts } from "react-icons/gi";
+import { LiaBedSolid } from "react-icons/lia";
+import { LiaBathSolid } from "react-icons/lia";
 import { useState } from "react";
 
+
 function MyCard(){
-    const [color, setColor] = useState();
+
+    const [isLiked, setIsLiked] = useState(false);
+    let iconColour = "red";
+
+    function ChangeLike(){
+      
+        if(isLiked){
+            console.log("liked")
+            setIsLiked(false);
+            iconColour = "red";
+        }
+
+        if(!isLiked){
+            console.log("unliked")
+            setIsLiked(true);
+            iconColour = "white";
+        }
+    }
+
     return(
         <div className='container'>
             {/* first component */}
             <div className='housePicture'>
-                <div className="hearticon">{color}<GiHearts type="button"
-            onClick={() => setColor("pink")} style={{
+                <div className="hearticon"><LuHeart onClick={ChangeLike} style={{
                     width:30,
                     height:30,
-                    color:"whitesmoke",
+                    color: iconColour,
                     float:"right",
                     margin:20,
                 }}/>
@@ -28,25 +48,33 @@ function MyCard(){
                     </div>
                     
                     <div className="CostPrice">$750,000</div>
-                    <div>742 Evergreen Terrace</div>
+                    <div className="address">742 Evergreen Terrace</div>
                 </div>
                 <hr/>
 
                 {/*thirth Container*/}
                 <div className='rooms'>
-                    <div><span></span> </div>
-                    <div><span></span> </div>
+                    <div className="Bedroom"><LiaBedSolid style={{width:40,
+                        height:40,
+                        verticalAlign:"middle",
+                    }}/><span className="number">3</span>Bedrooms </div>
+                    <div className="Bathroom"><LiaBathSolid style={{width:40,
+                        height:40,
+                        verticalAlign:"middle",
+                    }}/><span className="number">2</span>Bathrooms </div>
                 </div>
+                <hr/>
 
                      {/*forth Container*/}
-                <div></div>
-                <div className='profile'>
-                    
-                    <div>
-                        <div></div>
-                        <div></div>
+                    <div className="realtor">REALTOR</div>
+                    <div className='profile'>
+                        <div className="profilePicture"> </div> 
+                        <div >
+                            <div className="realtorName">Tiffany Heffner</div>   
+                            <div className="realtorNumber">(555) 555-4321</div>   
+                        </div>
+                       
                     </div>
-                </div>
             </div>  
         </div>
     )

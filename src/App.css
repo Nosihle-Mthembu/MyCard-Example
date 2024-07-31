@@ -1,7 +1,6 @@
 #root {
   margin: 0 auto;
   padding: 0;
-  /* text-align: center; */
   max-width: 100%;
   max-height: 100%;
 }
@@ -9,8 +8,8 @@
 /* first component */
 .container{
   background-color: white;
-  width: 20rem;
-  height: 30rem;
+  width: 25rem;
+  height: 40rem;
   border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -18,7 +17,7 @@
 .housePicture{
   background-image: url("./assets/German-house.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   width: 100%;
   height: 40%;
   border-top-left-radius: 10px;
@@ -31,19 +30,20 @@
 
 
 /* Second Compoonent */
-.secondComponent{
-  background-color: rgb(185, 92, 55);
-  width: 100%;
-  height: 8rem;
-}
-
 /* .details{
-  margin-left: 5%;
+ 
 } */
+.secondComponent{
+  margin-top: 4%;
+  width: 100%;
+  height: 6rem;
+  padding: 5%;
+}
 
 .houseName{
   display: flex;
-  gap: 5%;
+  gap: 2%;
+  color: rgb(82, 96, 107);
 }
 
 .house{
@@ -53,29 +53,76 @@
 
 .years{
   font-size: large;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .CostPrice{
   font-size: 200%;
   font-weight: 500;
+  color: rgb(44, 34, 35);
+}
+
+.address{
+  color: rgb(122, 130, 133);
 }
 
 /* thirth component */
 .rooms{
-  background-color: rgb(238, 112, 63);
-  width: 100%;
-  height: 4rem;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 5%;
+}
+
+.Bedroom{
+  color: rgb(122, 130, 133);
+}
+
+.Bathroom{
+  color: rgb(122, 130, 133);
+  /* margin-right: 7%; */
+}
+
+.number{
+  font-weight: 700;
+  font-size: larger;
+  color: black;
 }
 
 
 /* forfth Component */
 .profile{
-  background-color: rgb(221, 135, 101);
   width: 100%;
   height: 6rem;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  display: flex;
+  gap: 2%;
+  margin-left: 5%;
+}
+
+.realtor{
+  margin-left: 5%;
+  font-weight: 500;
+  font-size: large;
+}
+
+.profilePicture{
+  background-image: url("./assets/girlphoto.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20%;
+  height: 80%;
+  border-radius: 100%;
+}
+
+.realtorName{
+  font-weight: 700;
+  font-size: larger;
+}
+
+.realtorNumber{
+  color: rgb(122, 133, 138);
 }
 
 
