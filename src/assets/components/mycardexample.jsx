@@ -1,9 +1,20 @@
+import { LuHeart } from "react-icons/lu";
+import { useState } from "react";
+
 function MyCard(){
+    const [color, setColor] = useState("");
     return(
         <div className='container'>
             {/* first component */}
             <div className='housePicture'>
-            <div className='icon'></div>
+            <div >{color}<LuHeart type="button"
+        onClick={() => setColor("pink")} style={{
+                width:30,
+                height:30,
+                color:"whitesmoke",
+                float:"right",
+                margin:20,
+            }}/></div>
             </div>
 
             <div className='details'> {/*second Container*/}
