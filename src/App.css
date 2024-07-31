@@ -1,7 +1,7 @@
 #root {
   margin: 0 auto;
   padding: 0;
-  text-align: center;
+  /* text-align: center; */
   max-width: 100%;
   max-height: 100%;
 }
@@ -16,21 +16,18 @@
 }
 
 .housePicture{
-  background-color: brown;
+  background-image: url("./assets/German-house.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 40%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-/* .icon{
-  width: 2rem;
-  height: 2rem;
-  float: right;
-  margin: 20px;
-  color: transparent;
-  border: 1px solid white;
-} */
+.hearticon :hover{
+  fill: rgb(247, 79, 107);
+}
 
 
 /* Second Compoonent */
@@ -40,6 +37,29 @@
   height: 8rem;
 }
 
+/* .details{
+  margin-left: 5%;
+} */
+
+.houseName{
+  display: flex;
+  gap: 5%;
+}
+
+.house{
+  font-size: large;
+  font-weight: 500;
+}
+
+.years{
+  font-size: large;
+  font-weight: 400;
+}
+
+.CostPrice{
+  font-size: 200%;
+  font-weight: 500;
+}
 
 /* thirth component */
 .rooms{
@@ -58,22 +78,6 @@
   border-bottom-right-radius: 10px;
 }
 
-/* .details{
-  margin-left: 5%;
-} */
 
-/* .houseName{
-  display: flex;
-} */
 
-/* .house{
-  background-color: rgb(221, 141, 141);
-  width: 8rem;
-  height: 2rem;
-}
 
-.years{
-  background-color: rgb(235, 110, 110);
-  width: 8rem;
-  height: 2rem;
-} */
