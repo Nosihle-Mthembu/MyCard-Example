@@ -3,8 +3,8 @@ import Secondcomponent from "./secondsection";
 import Thirthcomponent from "./thirthsection";
 import Forthcomponent from "./forthsection";
 
-function MyCard(){
-    
+function MyCard(accomodation){
+    // console.log(accomodation)
     return(
         <div className='container'>
             {/* first component */}
@@ -14,7 +14,7 @@ function MyCard(){
 
             <div className='details'> 
                 {/*second Container*/}
-                <Secondcomponent/>
+                <Secondcomponent details = {accomodation}/>
                 <hr/>
 
                 {/*thirth Container*/}
@@ -22,8 +22,11 @@ function MyCard(){
                 <hr/>
 
                 {/*forth Container*/}
-                <Forthcomponent/>
+                <Forthcomponent />
+        
+                
             </div>  
+            
         </div>
     )
 }
