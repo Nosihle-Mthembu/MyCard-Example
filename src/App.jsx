@@ -7,7 +7,7 @@ import './App.css'
 function App() {
 
   let House = {
-    houseImage: url("../assets/German-house-300x200 clean.jpg"),
+    houseImage: "https://static.wixstatic.com/media/7d0df7_cf31b23a2465418684b4fdbfa3c306db~mv2.jpg/v1/fill/w_690,h_378,al_c,lg_1,q_80/7d0df7_cf31b23a2465418684b4fdbfa3c306db~mv2.jpg",
     housetype: "Detached House",
     age: 5  + "yrs",
     price: "R" + 750000,
@@ -17,6 +17,12 @@ function App() {
     RealtorFullame: "Tiffany Heffner",
     RealtorNumber: "(555) 555-4321",
   }
+
+  // localStorage.setItem("address", House.Address )
+  // console.log(localStorage.getItem("Address"))
+
+  localStorage.setItem("House", JSON.stringify(House))
+  console.log(localStorage.getItem("Address"))
 
     let HousesForSale = [
       {

@@ -3,12 +3,12 @@ import Secondcomponent from "./secondsection";
 import Thirthcomponent from "./thirthsection";
 import Forthcomponent from "./forthsection";
 
-function MyCard({accomodation}){
+function MyCard(accomodation){
 
     return(
         <div className='container'>
             {/* first component */}
-            <div className='housePicture'>
+            <div className='housePicture' style={{backgroundImage:`url(${require(accomodation.houseImage)})`}}>
               <Heart/>
             </div>
 
@@ -23,7 +23,6 @@ function MyCard({accomodation}){
 
                 {/*forth Container*/}
                 <Forthcomponent details = {accomodation}/>
-        
                 
             </div>  
             

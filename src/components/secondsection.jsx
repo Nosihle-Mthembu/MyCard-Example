@@ -1,4 +1,5 @@
 function Secondcomponent(details){
+
     return(
         <>
             <div className="secondComponent">  {/*second component*/}
