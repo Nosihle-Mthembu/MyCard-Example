@@ -15,7 +15,6 @@
 }
 
 .housePicture{
-  background-image: url("./assets/German-house.jpg");
   background-repeat: no-repeat;
   background-size:cover;
   width: 100%;

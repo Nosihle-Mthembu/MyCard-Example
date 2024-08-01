@@ -1,15 +1,14 @@
-function Secondcomponent({details}){
-    console.log(details)
+function Secondcomponent(details){
     return(
         <>
             <div className="secondComponent">  {/*second component*/}
                     <div className='houseName'>
-                        <div className='house'>{details.accomodation}</div>
-                        <div className='years'><li>5Y OLD</li></div>
+                        <div className='house'>{details.details.accomodation.housetype}</div>
+                        <div className='years'><li>{details.details.accomodation.age}</li></div>
                     </div>
                     
-                    <div className="CostPrice">R750,000</div>
-                    <div className="address">742 Evergreen Terrace</div>
+                    <div className="CostPrice">{details.details.accomodation.price}</div>
+                    <div className="address">{details.details.accomodation.price.Address}</div>
                 </div>
         </>
     )
