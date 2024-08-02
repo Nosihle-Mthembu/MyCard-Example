@@ -6,6 +6,9 @@ import './App.css'
 
 function App() {
 
+  let name = "Nana"
+  let data = [500, 20, 30, 100, 50, 96]
+
   let House = {
     houseImage: "https://static.wixstatic.com/media/7d0df7_cf31b23a2465418684b4fdbfa3c306db~mv2.jpg/v1/fill/w_690,h_378,al_c,lg_1,q_80/7d0df7_cf31b23a2465418684b4fdbfa3c306db~mv2.jpg",
     housetype: "Detached House",
@@ -21,12 +24,17 @@ function App() {
   // localStorage.setItem("address", House.Address )
   // console.log(localStorage.getItem("Address"))
 
+  localStorage.setItem("name",JSON.stringify(name))
+  localStorage.getItem("name")
+  localStorage.setItem("data",JSON.stringify(data))
+  localStorage.getItem("data")
+
   localStorage.setItem("House", JSON.stringify(House))
   console.log(localStorage.getItem("Address"))
 
     let HousesForSale = [
       {
-        houseImage:("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/43/e5/14/hotel-krone.jpg?w=1200&h=-1&s=1"),
+        houseImage:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/43/e5/14/hotel-krone.jpg?w=1200&h=-1&s=1",
         housetype: "secluded House",
         age: 10 + "yrs",
         price: "R" + 2050000,
@@ -37,7 +45,7 @@ function App() {
         RealtorNumber: "(332) 211-9569",
       },
       {
-        houseImage:("https://media-cdn.tripadvisor.com/media/photo-s/0c/fd/31/d0/killarney-lodge.jpg"),
+        houseImage:"https://media-cdn.tripadvisor.com/media/photo-s/0c/fd/31/d0/killarney-lodge.jpg",
         housetype: "Oudtshoorn Rural",
         age: 6 + "yrs",
         price: "R" + 735000,
@@ -48,7 +56,7 @@ function App() {
         RealtorNumber: "(186) 866-4210",
       },
       {
-        houseImage: ("https://lennon-estates.com/wp-content/uploads/2024/01/front-5-830x460.jpg"),
+        houseImage: "https://lennon-estates.com/wp-content/uploads/2024/01/front-5-830x460.jpg",
         housetype: "Town House",
         age: 2 + "yrs",
         price: "R" + 1500000,

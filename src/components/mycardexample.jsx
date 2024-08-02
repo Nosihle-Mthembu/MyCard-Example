@@ -4,11 +4,11 @@ import Thirthcomponent from "./thirthsection";
 import Forthcomponent from "./forthsection";
 
 function MyCard(accomodation){
-
+// console.log(accomodation.accomodation.houseImage)
     return(
         <div className='container'>
             {/* first component */}
-            <div className='housePicture' style={{backgroundImage:`url(${require(accomodation.houseImage)})`}}>
+            <div className='housePicture' style={{backgroundImage:`url(${require(accomodation.accomodation.houseImage)})`}}>
               <Heart/>
             </div>
 
