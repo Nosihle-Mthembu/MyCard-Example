@@ -12,14 +12,14 @@ function Heart(){
         setIsLiked(!isLiked)
        }
         if(isLiked){
-            console.log("liked")
+            // console.log("liked")
             // setIsLiked(false);
             iconColour = "red";
             filler = "red"
         }
 
         if(!isLiked){
-            console.log("unliked")
+            // console.log("unliked")
             // setIsLiked(true);
             iconColour = "white";
             filler = "none"

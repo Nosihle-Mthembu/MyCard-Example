@@ -2,7 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import MyCard from './components/mycardexample'
-import TestingFunctions from './components/testingFunctions'
+import TestingFunction from './components/testingFunctions'
+import AddBook from './components/addbook'
+import DisplayBooks from './components/displayBooks'
 import './App.css'
 
 function App() {
@@ -83,11 +85,13 @@ let LastMinute = {
 }
 
 function create(LastMinute){
-
+  
   localStorage.setItem("HousesForSale",JSON.stringify(HousesForSale))
-  localStorage.getItem("HousesForSale")
+ let houseData = JSON.parse(localStorage.getItem("HousesForSale"))
+ houseData.push(LastMinute)
+
 }
-create(HousesForSale.push(LastMinute))
+create()
 
 let BookTable = [{
   Book1:{
@@ -130,7 +134,7 @@ Book3:{
 
   let BookList = []
 
-// console.log(BookTable)
+  
   return (
     <>
     <div style={{display:"flex"}}>
@@ -139,7 +143,9 @@ Book3:{
       <MyCard accomodation = {HousesForSale[1]}/>
       <MyCard accomodation = {HousesForSale[2]}/>
       <MyCard accomodation = {LastMinute}/>
-      <TestingFunctions/>
+      <TestingFunction/>
+      <AddBook Book = {BookTable[0].Book1}/>
+      <DisplayBooks/>
     </div>
       
     </>
