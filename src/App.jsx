@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import MyCard from './components/mycardexample'
+import TestingFunctions from './components/testingFunctions'
 import './App.css'
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
   localStorage.getItem("data")
 
   localStorage.setItem("House", JSON.stringify(House))
-  console.log(localStorage.getItem("Address"))
+  localStorage.getItem("Address")
 
     let HousesForSale = [
       {
@@ -69,8 +70,67 @@ function App() {
 ]
 
 
+let LastMinute = {
+  houseImage: "https://lennon-estates.com/wp-content/uploads/2024/01/front-5-830x460.jpg",
+  housetype: "House",
+  age: 1 + "yrs",
+  price: "R" + 60000,
+  Address: 9 + "Scotville Court",
+  bathrooms: 2 + " Bathroom",
+  bedrooms: 3 + " Bedroom",
+  RealtorFullame: "Gladies Ngcobo",
+  RealtorNumber: "(033) 367-4549",
+}
 
+function create(LastMinute){
 
+  localStorage.setItem("HousesForSale",JSON.stringify(HousesForSale))
+  localStorage.getItem("HousesForSale")
+}
+create(HousesForSale.push(LastMinute))
+
+let BookTable = [{
+  Book1:{
+  ISBN:1425789632587,
+  Titles:"Outmeal,drums and school",
+  NumOfPages:300,
+  Edition:"thirth edition",
+  Publisher:"Harvard Publishers",
+  Editor:"Sandra Filler",
+  Format:"Hard Cover",
+  Price:"R"+150,
+  CoverDesigner:"Bill Filler",
+  ReleaseDate:"2008/01/06",
+},
+Book2:{
+  ISBN:1425789683697,
+  Titles:"The Phantom",
+  NumOfPages:2000,
+  Edition:"Not Found",
+  Publisher:"London Publishers",
+  Editor:"Lilly Hoff",
+  Format:"Print out",
+  Price:"R"+200,
+  CoverDesigner:"Lilly Hoff",
+  ReleaseDate:"Not found",
+},
+Book3:{
+  ISBN:1425423895476,
+  Titles:"How to make a slave",
+  NumOfPages:16,
+  Edition:"first Edition",
+  Publisher:"Shutter and Shooter",
+  Editor:"Deric House",
+  Format:"Print out",
+  Price:"R"+50,
+  CoverDesigner:"Not Found",
+  ReleaseDate:1999,}}]
+
+  localStorage.setItem("BookTable",JSON.stringify(BookTable))
+
+  let BookList = []
+
+// console.log(BookTable)
   return (
     <>
     <div style={{display:"flex"}}>
@@ -78,6 +138,8 @@ function App() {
       <MyCard accomodation = {HousesForSale[0]}/>
       <MyCard accomodation = {HousesForSale[1]}/>
       <MyCard accomodation = {HousesForSale[2]}/>
+      <MyCard accomodation = {LastMinute}/>
+      <TestingFunctions/>
     </div>
       
     </>
